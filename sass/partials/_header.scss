@@ -7,12 +7,13 @@ body > header {
       color: $title_color;
       text-decoration: none;
     }
+    font-weight: 300;
   }
   h2 {
     margin: .2em 0 0;
     @extend .sans;
     font-size: 1em;
     color: $subtitle-color;
-    font-weight: normal;
+    font-weight: 300;
   }
 }
