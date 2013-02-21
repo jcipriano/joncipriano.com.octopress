@@ -1,0 +1,36 @@
+.sidebar {
+  form {
+    margin: 0;
+    padding: 0;
+    .search {
+      font-weight: 300;
+      margin: 0;
+      padding: .5em .5em .5em .5em;
+      font-size: 1em;
+      font-family: $sans;
+      line-height: 1.4em;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #FFF;
+      border: 1px solid $nav-border;
+      color: #333;
+      &:focus {
+        color: #444;
+        border-color: #80b1df;
+        @include box-shadow(#80b1df 0 0 4px, #80b1df 0 0 3px inset);
+        background-color: #fff;
+        outline: none;
+      }
+    }
+  }
+}
+
+.collapse-sidebar {
+  form {
+    .search {
+      margin-top: 4.4em;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 body > nav {
+  font-family: $sans;
   font-weight: 300;
   position: relative;
   background-color: $nav-bg;
@@ -38,7 +39,7 @@ body > nav {
   }
   ul { display: none; }
   @media only screen and (min-width: 550px) {
-    font-size: .75em;
+    font-size: .65em;
     font-weight: 300;
     ul {
       @include horizontal-list(0);
@@ -57,20 +58,20 @@ body > nav {
     a {
       @include link-colors($nav-color, $nav-color-hover, $visited: $nav-color);
       font-family: $sans;
-      font-weight: 400;
+      font-weight: 300;
       //text-shadow: lighten($nav-bg, 12) 0 1px;
       float: left;
       text-decoration: none;
       font-size: 1em;
-      padding: .1em 0;
+      padding: .2em 0;
       line-height: 1.5em;
     }
     li + li {
-      border-left: 1px solid $nav-border-left;
+      //border-left: 1px solid $nav-border-left;
       margin-left: .8em;
       a {
         padding-left: .8em;
-        border-left: 1px solid $nav-border-right;
+        //border-left: 1px solid $nav-border-right;
       }
     }
     form {
