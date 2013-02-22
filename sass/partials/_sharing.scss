@@ -1,7 +1,10 @@
 .sharing {
+  margin-bottom: 1.25em;
+  
   p.meta + & {
-    padding: { top: 1em; left: 0; }
-    background: $img-border top left repeat-x;
+    padding: { top: 1em; bottom: 0.75em; left: 0; }
+    //border-top: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
   }
 }
 

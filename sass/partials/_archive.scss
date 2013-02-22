@@ -5,22 +5,24 @@
   article {
     padding: 1em 0 1em;
     position: relative;
-    background: $img-border bottom left repeat-x;
+    border-bottom: 1px solid #e4e4e4;
     &:last-child {
       background: none;
     }
     footer { padding: 0; margin: 0;}
   }
-  h1 { color: $text-color; margin-bottom: .3em; }
-  h2 { display: none; }
+  h1 { font-weight: 300; color: $text-color; margin-bottom: .3em; }
+  h2 { font-weight: 300; display: none; }
   h1 {
     font-size: 1.5em;
+    font-weight: 300; 
     a {
       @include hover-link;
       color: inherit;
       &:hover { color: $link-color-hover; }
-      font-weight: normal;
+      font-weight: 300;
       display: inline-block;
+      text-decoration: none;
     }
   }
   a.category, time {
@@ -33,7 +35,7 @@
     font-size: .9em;
     line-height: 1.2em;
     .month, .day { display: inline-block; }
-    .month { text-transform: uppercase; }
+    .month { text-transform: none; }
   }
   p { margin-bottom: 1em; }
   &, .entry-content { a { @include link-colors(inherit, $link-color-hover); }}

@@ -1,12 +1,19 @@
+.blog-index article {
+  border-top: 1px solid #e4e4e4;
+}
 article {
   padding-top: 1em;
-  a { @extend .force-wrap; }
+  padding-bottom: 1em;
+  a {
+    @extend .force-wrap;
+    text-decoration: none;
+  }
   header {
     position: relative;
     padding-top: 2em;
     padding-bottom: 1em;
     margin-bottom: 1em;
-    background: $img-border bottom left repeat-x;
+    //background: $img-border bottom left repeat-x;
     h1 {
       margin: 0;
       font-weight: 300;
@@ -19,15 +26,16 @@ article {
       margin: 0;
       &.meta {
         @extend .sans;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         position: absolute; top: 0;
         font-weight: 300;
+        color: $text-color-light;
       }
     }
     @media only screen and (min-width: 768px) {
       margin-bottom: 1.5em;
       padding-bottom: 1em;
-      background: $img-border bottom left repeat-x;
+      //background: $img-border bottom left repeat-x;
     }
   }
   h2 {
@@ -73,20 +81,41 @@ article {
     margin-top: 2em;
     @extend .sans;
     p.meta {
-      margin-bottom: .8em;
-      font-size: .85em;
+      margin-bottom: 0em;
+      font-size: .65em;
       clear: both;
       overflow: hidden;
+      color: $text-color-light;
+      a {
+        margin-bottom: 0;
+      }
     }
     .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
       @extend .separator;
     }
   }
-
+  .single-page-nav {
+    a {
+      background: darken($main-bg, 5);
+      display: inline-block;
+      padding: 0 .8em;
+      line-height: 2.5em;
+      border: 1px solid #e4e4e4;
+      text-decoration: none;
+      color: mix($text-color, $text-color-light);
+      @extend .sans;
+      @include transition(background-color .5s);
+      &:hover {
+        //background: $link-color-hover;
+        text-shadow: none;
+        color: $link-color-hover;
+      }
+    }
+  }
 }
 article + article {
   .blog-index & {
-    background: $img-border top left repeat-x;
+    //background: $img-border top left repeat-x;
   }
 }
 #content .blog-index {
@@ -98,18 +127,21 @@ article + article {
     a { color: inherit; &:hover { color: $link-color-hover; } }
   }
   a[rel=full-article] {
+    font-size: 0.65em;
     background: darken($main-bg, 5);
     display: inline-block;
-    padding: .4em .8em;
+    padding: 0 .8em;
+    line-height: 2.5em;
+    border: 1px solid #e4e4e4;
     margin-right: .5em;
     text-decoration: none;
     color: mix($text-color, $text-color-light);
-    @extend .serif;
+    @extend .sans;
     @include transition(background-color .5s);
     &:hover {
-      background: $link-color-hover;
+      //background: $link-color-hover;
       text-shadow: none;
-      color: $main-bg;
+      color: $link-color-hover;
     }
   }
   footer {
@@ -119,17 +151,18 @@ article + article {
 }
 
 .separator {
-  content: "\2022 ";
+  content: "\- ";
   padding: 0 .4em 0 .2em;
   display: inline-block;
 }
 
 #content div.pagination {
   text-align: center;
-  font-size: .75em;
+  font-size: .65em;
   position: relative;
+  margin: 0;
   //background: $img-border top left repeat-x;
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #e4e4e4;
   padding: {top: 1.5em; bottom: 1.5em;}
   a {
     text-decoration: none;
@@ -137,6 +170,5 @@ article + article {
     &.prev { position: absolute; left: 0; }
     &.next { position: absolute; right: 0; }
     &:hover { color: $link-color-hover; }
-
   }
 }

@@ -10,14 +10,20 @@ $nav-bg: #CCC;
 $nav-bg-front: #111;
 $nav-bg-back: #CCC;
 $nav-color: #333;
+$nav-color-hover: #C00;
 $sidebar-bg: #F6F6F6;
-//$sidebar-link-color: saturate(#526f9a, 10);
-//$sidebar-link-color-hover: darken(#7ab662, 9);
+$sidebar-link-color: #333;
+$sidebar-link-color-hover: d$nav-color-hover;
 $footer-bg: #CCC;
 $footer-bg-front: #111;
 $footer-bg-back: #CCC;
-$footer-color: #333;
+$footer-color: #444;
+$footer-link-color: #444;
+$footer-link-color-hover: #C00;
 $text-color: #222 !default;
+$text-color-light: #777;
+$link-color: #C00;
+$link-color-visited: #C00;
 
 /* To use the light Solarized highlighting theme uncomment the following line */
 //$solarized: light;
