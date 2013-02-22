@@ -39,7 +39,7 @@ body > nav {
   }
   ul { display: none; }
   @media only screen and (min-width: 550px) {
-    font-size: .65em;
+    font-size: .85em;
     font-weight: 300;
     ul {
       @include horizontal-list(0);

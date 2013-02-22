@@ -4,6 +4,7 @@
 article {
   padding-top: 1em;
   padding-bottom: 1em;
+  max-width: 960px;
   a {
     @extend .force-wrap;
     text-decoration: none;
@@ -40,7 +41,8 @@ article {
   }
   h2 {
     padding-top: 0.8em;
-    background: $img-border top left repeat-x;
+    border-top: 1px solid #e4e4e4;
+    //background: $img-border top left repeat-x;
   }
   .entry-content & h2:first-child, header + h2 { padding-top: 0; }
   h2:first-child, header + h2 { background: none; }
@@ -55,9 +57,8 @@ article {
   img, video, .flash-video {
     @extend .flex-content;
     @extend .basic-alignment;
-    @include shadow-box;
   }
-  video, .flash-video { margin: 0 auto 1.5em; }
+  video, .flash-video { margin: 0 auto 4em; }
   video { display: block; width: 100%; }
   .flash-video {
     > div {
